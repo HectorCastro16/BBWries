@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+<constant name="struts.multipart.saveDir" value="D:\\DatosApp\\" />
+	<package name="demo" extends="struts-default">
+	
+		<action name="ListaLibroXML" class="action.LibroAction" method="cargaDatosLibros">
+		<result name ="success">/index.jsp</result>
+		<result name="error">/index.jsp</result>
+		</action>	
+			
+		<action name="ListaTipoLibroXML" class="action.TipoLibroAction" method="cargaDatosTipoLibros">
+		<result name ="success">/agregalibro.jsp</result>
+		<result name="error">agregalibro.jsp</result>
+		</action>
+		
+		<action name="validaUsuarioXML" class="action.UsuarioAction" method="validaUsuarioAction">
+		<result name ="success">/panel.jsp</result>
+		<result name ="login">/padministracion.jsp</result>
+		<result name ="input">/padministracion.jsp</result>
+		<result name="error">/login.jsp</result>
+		</action>
+		
+		<action name="ListaLibrosTotalXML" class="action.LibroAction" method="cargaDatosTotalLibros">
+		<result name ="success">/panel.jsp</result>
+		<result name="error">/panel.jsp</result>
+		</action>
+		
+		<action name="IngresoLibroXML" class="action.LibroAction" method="IngresoLibro">
+		<result name ="success">/agregalibro.jsp</result>
+		<result name="error">/agregalibro.jsp</result>
+		</action>
+		
+		<action name="IngresoUsuariosXML" class="action.UsuarioAction" method="InsertarUsuarioAction">
+		<result name ="success">/login.jsp</result>
+		<result name="error">/registrarse.jsp</result>
+		</action>
+		
+		<action name="ListadoLibrosDestacadosXML" class="action.LibroAction" method="cargaDatosDinamicosLibrosDestacados">
+		<result name="success">/listalibrosdestacados.jsp</result>
+		<result name="error">/error.jsp</result>
+		</action>
+		
+		<action name="ListaLibrosTotalesXML" class="action.LibroAction" method="cargaDatosDinamicosLibrosDestacados">
+		<result name="success">/listaLibros.jsp</result>
+		<result name="error">/error.jsp</result>
+		</action>
+		
+		<action name="BuscaLibroObjetoXML" class="action.LibroAction" method="BuscaLibroObjetoAction">
+		<result name="success">/actualiza_libro.jsp</result>
+		<result name="error">/error.jsp</result>
+		</action>
+		
+		<action name="ActualizaLibroXML" class="action.LibroAction" method="ActualizaLibroAction">
+		<result name="success">/listaLibros.jsp</result>
+		<result name="error">/error.jsp</result>
+		</action>
+				
+		<action name="BusquedaLibroID" class="action.LibroAction" method="BuscaLibroAction">
+		<result name="success">/listaLibros.jsp</result>
+		<result name="error">/error.jsp</result>
+		</action>
+		
+		<action name="EliminadoLogicoLibroXML" class="action.LibroAction" method="EliminadoLogicoLibroAction">
+		<result name="success">/listaLibros.jsp</result>
+		<result name="error">/error.jsp</result>
+		</action>
+		
+		<action name="ListaTipoUsuarioXML" class="action.UsuarioAction" method="CargaDatosTipoUsuarioAction">
+		<result name ="success">/agregausuario.jsp</result>
+		<result name="error">/error.jsp</result>
+		</action>
+		
+		<action name="IngresaAdminUsuariosXML" class="action.UsuarioAction" method="InsertarAdminUsuarioAction">
+		<result name ="success">/agregausuario.jsp</result>
+		<result name="error">/error.jsp</result>
+		</action>
+		
+		<action name="ListadoUsuariosXML" class="action.UsuarioAction" method="cargaDatosDinamicosUsuario">
+		<result name="success">/lista_usuarios.jsp</result>
+		<result name="error">/error.jsp</result>
+		</action>
+	
+		<action name="BuscaUsuarioObjetoXML" class="action.UsuarioAction" method="BuscaUsuarioObjetoAction">
+		<result name="success">/actualiza_usuario.jsp</result>
+		<result name="error">/error.jsp</result>
+		</action>
+		
+		<action name="ActualizaUsuarioXML" class="action.UsuarioAction" method="ActualizaUsuarioAction">
+		<result name="success">/lista_usuarios.jsp</result>
+		<result name="error">/error.jsp</result>
+		</action>
+		
+		<action name="EliminadoLogicoUsuarioXML" class="action.UsuarioAction" method="EliminadoLogicoUsuarioAction">
+		<result name="success">/lista_usuarios.jsp</result>
+		<result name="error">/error.jsp</result>
+		</action>
+		
+		<action name="BusquedaUsuarioID" class="action.UsuarioAction" method="BuscaUsuarioAction">
+		<result name="success">/lista_usuarios.jsp</result>
+		<result name="error">/error.jsp</result>
+		</action>
+		
+		<action name="EnvioCorreoXML" class="action.Email" method="EnvioCorreo">
+		<result name="success">/success_correo.jsp</result>
+		<result name="error">/error.jsp</result>
+		</action>
+
+		<action name="BuscaUsuarioCorreoXML" class="action.Email" method="BuscaUsuarioEnviarCorreo">
+		<result name="success">/Email.jsp</result>
+		<result name="error">/error.jsp</result>
+		</action>
+		
+	</package>
+</struts>
